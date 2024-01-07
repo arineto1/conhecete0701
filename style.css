@@ -1,0 +1,40 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.container {
+    position: relative;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: auto;
+    padding: 10px 5px;
+    z-index: 100;
+    background-size: auto;
+    display: flex;
+    align-items: flex-start; /* Alinhar itens no topo do flex container */
+}
+
+.logo {
+    background-image: url('logo.png');  
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: auto;
+    height: 300px; /* Ajuste o tamanho da logo conforme necessário */
+    margin-left: 10px; /* Ajuste conforme necessário para o espaçamento à esquerda */
+    margin-top: 10px; /* Ajuste conforme necessário para o espaçamento no topo */
+}
+
+canvas {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1; /* O canvas agora tem um índice Z menor para ficar atrás do logo */
+}
